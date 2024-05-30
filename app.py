@@ -29,7 +29,7 @@ def to_json(df, tgt_base_dir, ds_name, file_name):
 
 def file_converter(src_base_dir, tgt_base_dir, ds_name):
     schemas = json.load(open(f'{src_base_dir}/schemas.json'))
-    files = glob.glob(f'{src_base_dir}/{ds_name}/part-*')
+    files = glob.glob(f'{src_base_dir}/{ds_name}/*')
     if len(files) == 0:
         raise NameError(f'No files found for {ds_name}')
 
